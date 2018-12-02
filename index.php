@@ -31,6 +31,28 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={
     id: 'mapbox.streets',
     accessToken: 'pk.eyJ1IjoiZ2FjaGlsMDEiLCJhIjoiY2pvc2xwYmMxMDJmazNxcWtrejQzbGMwciJ9.mt4bKB-EsMeE1mVfacKpAQ'
 }).addTo(mymap);
+
+mymap.on('click', addMarker);
+
+function addMarker(e) {
+    // // Add marker to map at click location; add popup window
+    // var newMarker = new L.marker(e.latlng).addTo(mymap)
+    // .bindPopup("<input type='button' value='x' class='marker-delete-button'/>")
+    // .openPopup();
+    var marker = L.marker(e.latlng, {
+
+        title: "Resource Location",
+        alt: "Resource Location",
+        riseOnHover: true,
+        draggable: true,
+
+    }).bindPopup("<input type='button' value='Delete this marker' class='marker-delete-button'/>")
+        .addTo(mymap)
+    marker.on("popupopen", onPopupOpen);
+
+    return marker;
+
+}
 </script>
 </div> 
 <?php
