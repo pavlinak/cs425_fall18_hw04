@@ -17,14 +17,13 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <script src="main.js"></script>
-    <script src="leaflet.js"></script>
     <link rel="stylesheet" href="map.css"/>
 </head>
 <body>
 
 <div id="mapid">
 <script>
-var mymap = L.map('mapid').setView([51.505, -0.09], 13);
+var mymap = L.map('mapid').setView([35.114477, 33.317803], 10);
 L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
     maxZoom: 18,
@@ -46,18 +45,17 @@ function addMarker(e) {
         riseOnHover: true,
         draggable: true,
 
-    }).bindPopup("<input type='button' value='Delete this marker' class='marker-delete-button'/>")
+    }).bindPopup('<a href="index.html">Complete Form</a>')
         .addTo(mymap)
-    marker.on("popupopen", onPopupOpen);
+   // marker.on("popupopen", onPopupOpen);
 
     return marker;
 
 }
+
+function onPopupOpen(){
+}
 </script>
 </div> 
-<?php
- include("index.html");
-?>
-   
 </body>
 </html>
