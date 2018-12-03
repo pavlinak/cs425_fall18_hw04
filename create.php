@@ -1,20 +1,17 @@
 <?php
-define('DB_SERVER', 'localhost');
-define('DB_USERNAME', 'root');
-define('DB_PASSWORD', '');
-define('DB_NAME', 'cs425_hw04');
+$ser = "localhost";
+$user = "root";
+$pass = "";
+$db = "cs425_hw04";
  
-$link = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
- 
-if($link === false){
-    die("ERROR: Could not connect. " . mysqli_connect_error());
-}
+$con = mysqli_connect($ser, $user, $pass, $db)or die ("Connection Failed");
+echo "Connected successfully....";
 
 $Name = $_POST['Name'];
 $Photo = $_POST['Photo'];
 $Location = $_POST['Location'];
 $Operator = $_POST['Operator'];
-$CommisionDate = $_POST['CommissionDate'];
+$CommisionDate = $_POST['CommisionDate'];
 $Description = $_POST['Description'];
 $SystemPower = $_POST['SystemPower'];
 $AnnualProduction = $_POST['AnnualProduction'];
@@ -27,5 +24,16 @@ $Communication = $_POST['Communication'];
 $Inverter = $_POST['Inverter'];
 $Sensors = $_POST['Sensors'];
 
-$sql = "INSERT INTO pv_system (Name,Photo,Location,Operator,Commision date, Description, System Power, Annual Production, CO2 Avoided, Reimbursement, Solar Panel Modules, Azimuth Angle, Inclination Angle, Communication, Inverter, Sensors) VALUES ['$Name','$Photo','$Location','$Operator','$CommisionDate','$Description','$SystemPower','$AnnualProduction','$CO2Avoided','$Reimbursement','$Panel','$Azimuth','$Inclination','$Communication','$Inverter', $Sensors]";
+$query = "INSERT INTO pv_system (Name,Photo,Location,Operator,Commision_date, Description, System_Power, Annual_Production, CO2_Avoided, Reimbursement, Solar_Panel_Modules, Azimuth_Angle, Inclination_Angle, Communication, Inverter, Sensors) VALUES ('".$Name."','".$Photo."','".$Location."','".$Operator."','".$CommisionDate."','".$Description."','".$SystemPower."','".$AnnualProduction."','".$CO2Avoided."','".$Reimbursement."','".$Panel."','".$Azimuth."','".$Inclination."','".$Communication."','".$Inverter."', '".$Sensors."')";
+
+if(!mysqli_query($con, $query)){
+    header("Location: http://localhost/New/"); /* Redirect browser */
+    exit();
+}
+else{
+    header("Location: http://localhost/New/new.php"); /* Redirect browser */
+    exit();
+}
+
+mysqli_close($con);
 ?>
