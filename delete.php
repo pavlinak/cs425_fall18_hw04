@@ -1,7 +1,7 @@
 <?php
-define('DB_SERVER', 'localhost');
-define('DB_USERNAME', 'root');
-define('DB_PASSWORD', '');
+define('DB_SERVER', '34.222.23.83');
+define('DB_USERNAME', 'admin');
+define('DB_PASSWORD', '=@!#254tecmint');
 define('DB_NAME', 'cs425_hw04');
  
 $link = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);

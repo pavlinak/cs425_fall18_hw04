@@ -1,7 +1,7 @@
 <?php
-$ser = "localhost";
-$user = "root";
-$pass = "";
+$ser = "34.222.23.83";
+$user = "admin";
+$pass = "=@!#254tecmint";
 $db = "cs425_hw04";
  
 $con = mysqli_connect($ser, $user, $pass, $db)or die ("Connection Failed");
@@ -27,11 +27,11 @@ $Sensors = $_POST['Sensors'];
 $query = "INSERT INTO pv_system (Name,Photo,Location,Operator,Commision_date, Description, System_Power, Annual_Production, CO2_Avoided, Reimbursement, Solar_Panel_Modules, Azimuth_Angle, Inclination_Angle, Communication, Inverter, Sensors) VALUES ('".$Name."','".$Photo."','".$Location."','".$Operator."','".$CommisionDate."','".$Description."','".$SystemPower."','".$AnnualProduction."','".$CO2Avoided."','".$Reimbursement."','".$Panel."','".$Azimuth."','".$Inclination."','".$Communication."','".$Inverter."', '".$Sensors."')";
 
 if(!mysqli_query($con, $query)){
-    header("Location: http://localhost/New/"); /* Redirect browser */
+    header("Location: 34.222.23.83/cs425_fall18_hw04_tm12"); /* Redirect browser */
     exit();
 }
 else{
-    header("Location: http://localhost/New/new.php"); /* Redirect browser */
+    header("Location: 34.222.23.83/cs425_fall18_hw04_tm12/create.php"); /* Redirect browser */
     exit();
 }
 
