@@ -10,7 +10,8 @@ if($link === false){
     die("ERROR: Could not connect. " . mysqli_connect_error());
 }
 
-$Name = $_POST['name'];
+$Name = $_POST['Name'];
+$Location = $_POST['Location'];
 
-$sql = "INSERT INTO cs425_hw04 (Name) VALUES ['$Name']";
+$sql = "INSERT INTO pv_system (Name) VALUES ['$Name']";
 ?>

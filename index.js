@@ -1,18 +1,18 @@
 var template = '<form action="form.php" method="POST">\
-    <label for="InputName">Name</label>\
-    <input type="text" class="form-control" id="InputName" aria-describedby="name" placeholder="Enter name">\
+    <label for="Name">Name</label>\
+    <input type="text" class="form-control" id="Name" aria-describedby="name" placeholder="Enter name">\
     <br>\
-    <label for="InputLocation">Location</label>\
-    <input type="text" class="form-control" id="InputLocation" placeholder="Your Location">\
+    <label for="Location">Location</label>\
+    <input type="text" class="form-control" id="Location" placeholder="Your Location">\
     <br>\
-    <label for="InputOperator">Operator</label>\
-    <input type="text" class="form-control" id="InputOperator" placeholder="Operator">\
+    <label for="Operator">Operator</label>\
+    <input type="text" class="form-control" id="Operator" placeholder="Operator">\
     <br>\
     <label for="CommisionDate">Commision Date</label>\
     <input type="date" class="form-control" id="CommisionDate" placeholder="Commision Date">\
     <br>\
-    <label for="InputDescription">Description</label>\
-    <input type="text" class="form-control" id="InputDiscription" placeholder="Discription">\
+    <label for="Description">Description</label>\
+    <input type="text" class="form-control" id="Discription" placeholder="Discription">\
     <br>\
     <label for="SystemPower">System Power</label>\
     <input type="number" class="form-control" id="SystemPower" placeholder="System Power">\
@@ -26,23 +26,23 @@ var template = '<form action="form.php" method="POST">\
     <label for="Reimbursement">Reimbursement</label>\
     <input type="number" class="form-control" id="Reimbursement" placeholder="Reimbursement">\
     <br>\
-    <label for="InputPanel">Solar Panel Modules</label>\
-    <input type="text" class="form-control" id="InputPanel" placeholder="Panel">\
+    <label for="Panel">Solar Panel Modules</label>\
+    <input type="text" class="form-control" id="Panel" placeholder="Panel">\
     <br>\
-    <label for="InputAzimuth">Azimuth Angle</label>\
-    <input type="number" class="form-control" id="InputAzimuth" placeholder="Azimuth">\
+    <label for="Azimuth">Azimuth Angle</label>\
+    <input type="number" class="form-control" id="Azimuth" placeholder="Azimuth">\
     <br>\
-    <label for="InputInclination">Inclination Angle</label>\
-    <input type="number" class="form-control" id="InputInclination" placeholder="Inclination">\
+    <label for="Inclination">Inclination Angle</label>\
+    <input type="number" class="form-control" id="Inclination" placeholder="Inclination">\
     <br>\
-    <label for="InputCommunication">Communication</label>\
-    <input type="text" class="form-control" id="InputCommunication" placeholder="Communication">\
+    <label for="Communication">Communication</label>\
+    <input type="text" class="form-control" id="Communication" placeholder="Communication">\
     <br>\
-    <label for="InputInverter">Inverter</label>\
-    <input type="text" class="form-control" id="InputInverter" placeholder="Inverter">\
+    <label for="Inverter">Inverter</label>\
+    <input type="text" class="form-control" id="Inverter" placeholder="Inverter">\
     <br>\
-    <label for="InputSensors">Sensors</label>\
-    <input type="text" class="form-control" id="InputSensors" placeholder="Sensors">\
+    <label for="Sensors">Sensors</label>\
+    <input type="text" class="form-control" id="Sensors" placeholder="Sensors">\
     <br>\
     <button type="submit" class="btn btn-default" id="save">Save</button>\
     <button type="submit" class="btn btn-default" id="delete">Delete</button>\
