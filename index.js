@@ -47,11 +47,10 @@ var template = '<form action="form.php" method="POST">\
     <label for="Sensors">Sensors</label>\
     <input type="text" class="form-control" id="Sensors" placeholder="Sensors">\
     <br>\
-    <button type="submit" class="btn btn-default" id="save">Save</button>\
-    <button type="submit" class="btn btn-default" id="delete">Delete</button>\
-    <button type="submit" class="btn btn-default" id="change">Change</button>\
-    <button type="submit" class="btn btn-default" id="create">Create</button>\
-    <button type="submit" class="btn btn-default" data-dismiss="modal" id="close">Close</button>\
+    <button type="submit" class="btn btn-default" id="Get">Get</button>\
+    <button type="submit" class="btn btn-default" id="Create">Create</button>\
+    <button type="submit" class="btn btn-default" id="Update">Update</button>\
+    <button type="submit" class="btn btn-default" id="Delete">Delete</button>\
 </form>';
 
 var mymap = L.map('mapid').setView([35.114477, 33.317803], 10);
