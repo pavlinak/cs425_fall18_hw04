@@ -11,6 +11,7 @@ if($link === false){
 }
 
 $Name = $_POST['Name'];
+$Photo = $_POST['Photo'];
 $Location = $_POST['Location'];
 $Operator = $_POST['Operator'];
 $CommisionDate = $_POST['CommissionDate'];
@@ -26,5 +27,5 @@ $Communication = $_POST['Communication'];
 $Inverter = $_POST['Inverter'];
 $Sensors = $_POST['Sensors'];
 
-$sql = "INSERT INTO pv_system (Name,Location,Operator,Commision date, Description, System Power, Annual Production, CO2 Avoided, Reimbursement, Solar Panel Modules, Azimuth Angle, Inclination Angle, Communication, Inverter, Sensors) VALUES ['$Name','$Location','$Operator','$CommisionDate','$Description','$SystemPower','$AnnualProduction','$CO2Avoided','$Reimbursement','$Panel','$Azimuth','$Inclination','$Communication','$Inverter', $Sensors]";
+$sql = "INSERT INTO pv_system (Name,Photo,Location,Operator,Commision date, Description, System Power, Annual Production, CO2 Avoided, Reimbursement, Solar Panel Modules, Azimuth Angle, Inclination Angle, Communication, Inverter, Sensors) VALUES ['$Name','$Photo','$Location','$Operator','$CommisionDate','$Description','$SystemPower','$AnnualProduction','$CO2Avoided','$Reimbursement','$Panel','$Azimuth','$Inclination','$Communication','$Inverter', $Sensors]";
 ?>

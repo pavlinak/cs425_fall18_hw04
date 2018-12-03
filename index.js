@@ -2,14 +2,14 @@ var template = '<form action="form.php" method="POST">\
     <label for="Name">Name</label>\
     <input type="text" class="form-control" id="Name" aria-describedby="name" placeholder="Enter name">\
     <br>\
+    <label for="Photo">Photo url:</label>\
+    <input required type="url" class="form-control" id="Photo" placeholder="Photo URL">\
+    <br>\
     <label for="Location">Location</label>\
     <input type="text" class="form-control" id="Location" placeholder="Your Location">\
     <br>\
     <label for="Operator">Operator</label>\
     <input type="text" class="form-control" id="Operator" placeholder="Operator">\
-    <br>\
-    <label for="photo">Photo url:</label>\
-    <input required type="url" class="form-control" id="photo" placeholder="Photo URL">\
     <br>\
     <label for="CommisionDate">Commision Date</label>\
     <input type="date" class="form-control" id="CommisionDate" placeholder="Commision Date">\
